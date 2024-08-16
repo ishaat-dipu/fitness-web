@@ -48,22 +48,78 @@
     color: white;
 }
 
-.banner1{
-    color: azure;
-    margin-left: 10rem;
+.btn1{
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #ff5e3a;
 }
-.banner{
+.btn2{
+    color:white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+
+}
+.banner {
     display: flex;
     justify-content: space-between;
+    align-items: center; /* Vertically aligns items */
+    padding: 20px;
 }
-.banner1 h1{
-    font-size: 40px;
-    font-size: 4.5 rem;
+
+/* Text container */
+.banner1 {
+    flex: 1;
+    color: azure;
+    margin-left: 10rem;
+    padding-right: 20px;
 }
-.banner2{
-    display: flex;
-    margin-right: 10rem;
-    position: relative;
+
+/* Heading styles */
+.banner1 h1 {
+    font-size: 4.5rem; /* Adjusted font size correctly */
+    line-height: 1.2;
+}
+
+/* Image container */
+.banner2 {
+    flex: 1;
+    max-width: 40%; /* Adjust width as needed */
+}
+
+/* Image styling */
+.banner2 img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensures no extra space below image */
+    margin-left: auto; /* Pushes the image to the right */
+}
+
+/* Buttons container */
+.ishaat {
+    margin-top: 20px;
+}
+
+/* Button styles */
+.btn1, .btn2 {
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #FF5733;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn1:hover, .btn2:hover {
+    background-color: #C0392B;
+}
+
+/* Body styles (optional, to match your theme) */
+body {
+    background-color: #111;
+    color: #fff;
 }
 .habits-section {
     text-align: center;
@@ -225,6 +281,102 @@
     color: #ccc;
 }
 
+.bmi-calculator {
+    padding: 40px 0;
+}
+
+.bmi-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.bmi-header p {
+    font-size: 1.1em;
+    color: #BBBBBB;
+    margin-bottom: 30px;
+}
+
+.bmi-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.bmi-chart,
+.bmi-calculator-form {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 45%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bmi-chart h3,
+.bmi-calculator-form h3 {
+    margin-bottom: 15px;
+}
+
+.bmi-chart table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bmi-chart th,
+.bmi-chart td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #444444;
+}
+
+.bmi-chart th {
+    background-color: #444444;
+}
+
+.bmi-chart td {
+    background-color: #2B2B2B;
+}
+
+.bmi-calculator-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bmi-calculator-form input,
+.bmi-calculator-form select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444444;
+    color: #FFFFFF;
+    font-size: 1em;
+}
+
+.bmi-calculator-form button {
+    padding: 12px;
+    background-color: #FF6347;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.bmi-calculator-form button:hover {
+    background-color: #FF4500;
+}
+
+@media screen and (max-width: 768px) {
+    .bmi-content {
+        flex-direction: column;
+    }
+
+    .bmi-calculator-form form {
+        gap: 10px;
+    }
+}
+
 .footer {
     background-color: #2C2C2C;
     padding: 50px 20px;
@@ -287,3 +439,10 @@
     font-size: 0.8em;
     color: #666;
 }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
