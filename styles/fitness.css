@@ -5,11 +5,13 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-  }
-  body{
+}
+
+body {
     background-color: #1C1C1C;
-  }
-  .navbar {
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,6 +48,43 @@
 .nav-links a:hover {
     background-color: #ff5e3a;
     color: white;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack logo and nav links vertically */
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack nav links vertically */
+        align-items: center; /* Center the nav links */
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Add vertical spacing between links */
+    }
+
+    .nav-links a {
+        width: 100%; /* Make links full width */
+        text-align: center; /* Center the text in links */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px; /* Adjust logo size for smaller screens */
+    }
+
+    .nav-links li {
+        margin: 8px 0; /* Reduce spacing between links */
+    }
+
+    .nav-links a {
+        padding: 8px 15px; /* Adjust padding for smaller screens */
+    }
 }
 
 .btn1{
@@ -551,10 +590,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap; /* Allow wrapping of content on smaller screens */
 }
 
 .footer .logo-section {
     max-width: 300px;
+    margin-bottom: 20px; /* Add space below logo section on smaller screens */
 }
 
 .footer .logo-section h1 {
@@ -572,6 +613,7 @@ body {
 .footer .links-section {
     display: flex;
     gap: 50px;
+    flex-wrap: wrap; /* Allow wrapping of links section on smaller screens */
 }
 
 .footer .links-section h3 {
@@ -613,4 +655,56 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack sections vertically on tablets and smaller */
+        align-items: center; /* Center align the content */
+        text-align: center; /* Center text alignment */
+    }
+
+    .footer .links-section {
+        gap: 30px; /* Reduce gap between link sections */
+    }
+
+    .footer .logo-section {
+        margin-bottom: 30px; /* Add more space below logo section */
+    }
+
+    .footer .links-section h3 {
+        font-size: 1.1em; /* Slightly reduce heading size for mobile */
+    }
+
+    .footer .links-section ul li a {
+        font-size: 0.85em; /* Slightly reduce font size for links */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .footer .links-section {
+        gap: 20px; /* Further reduce gap between link sections */
+    }
+
+    .footer .logo-section h1 {
+        font-size: 2em; /* Adjust logo font size for mobile */
+    }
+
+    .footer .logo-section p {
+        font-size: 0.85em; /* Adjust paragraph font size for mobile */
+    }
+
+    .footer .links-section h3 {
+        font-size: 1em; /* Reduce heading size for smaller screens */
+    }
+
+    .footer .links-section ul li a {
+        font-size: 0.8em; /* Further reduce font size for links */
+    }
+}
+
 
